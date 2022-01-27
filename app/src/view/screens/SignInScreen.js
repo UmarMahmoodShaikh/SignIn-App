@@ -19,7 +19,7 @@ function SignInScreen({navigation}) {
                         Welcome Back!
                     </Text>
                     <Text  style={{ fontWeight: 'bold', fontSize: 17, color: COLORS.light }}>
-                        SignIn to Continue
+                        Enter login details and press SignIn
                     </Text>
                 </View>
                 <View style={{ marginTop: 20 }}>
@@ -32,13 +32,22 @@ function SignInScreen({navigation}) {
                         <TextInput placeholder='Enter Phone Number'  style={ STYLES.input } />
                     </View>
                     <View style={ STYLES.btnPrimary }>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
                         <Text style={{ color: COLORS.white, fontWeight: 'bold', fontSize: 18 }}>
-                            Signin
+                            SignIn
                         </Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={ STYLES.btnPrimary }>
+                    <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+                        <Text style={{ color: COLORS.white, fontWeight: 'bold', fontSize: 18 }}>
+                            SignUp
+                        </Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={{ marginVertical: 20, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                         <View style={ STYLES.line }></View>
-                        <Text style={{ fontWeight: 'bold', marginHorizontal: 5 }}> OR </Text>
+                        <Text style={{ color: COLORS.pink,  fontWeight: 'bold', marginHorizontal: 5 }}> OR </Text>
                         <View style={ STYLES.line }></View>
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -53,12 +62,12 @@ function SignInScreen({navigation}) {
                         </View>
                     </View>
                 </View>
-                <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', marginTop: 40, marginBottom: 20}}>
+                {/* <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', marginTop: 40, marginBottom: 20}}>
                     <Text style={{ fontWeight : 'bold', color: COLORS.light}} >New user!</Text>
                     <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                         <Text style={{ fontWeight : 'bold', color: COLORS.pink}} > SignUp</Text> 
                     </TouchableOpacity>
-                </View>
+                </View> */}
                 <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', marginTop: 40, marginBottom: 20}}>
                     <Text style={{ fontWeight : 'bold', color: COLORS.light}} >Back to</Text>
                     <TouchableOpacity onPress={() => navigation.navigate('LandingScreen')}>

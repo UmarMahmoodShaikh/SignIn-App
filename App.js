@@ -11,10 +11,10 @@ const App = () => {
     
     <NavigationContainer>
       <Stack.Navigator screenOptions={{header:()=>null}}>
+      <Stack.Screen name="LandingScreen" component={LandingScreen} />
       <Stack.Screen name="Signin" component={SignInScreen} />
       <Stack.Screen name="SignUp" component={SignoUpScreen} />
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="LandingScreen" component={LandingScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

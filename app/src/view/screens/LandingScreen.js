@@ -5,15 +5,29 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import COLORS from '../../consts/color'
 import STYLES from '../../styles/index.';
-function LandingScreen (navigation) {
+function LandingScreen ({navigation}) {
     return (
         <>
-        
         <SafeAreaView style={{ paddingHorizontal: 20, flex: 1, backgroundColor: COLORS }}>
-            <Text>WELCOME TO SIMPLE LOGIN APP</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={{ flexDirection: 'row', marginTop: 60 }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20, color: COLORS.dark }}>Simple</Text>
+                    <Text style={{ fontWeight: 'bold', fontSize: 20, color: COLORS.secondary }}> APP</Text>
+                </View>
+            <View style={{ marginTop: 30 }}>
+                    <Text  style={{ fontWeight: 'bold', fontSize: 25, color: COLORS.dark }}>
+                        Press OK to Continue
+                    </Text>
+                    <Text  style={{ fontWeight: 'bold', fontSize: 17, color: COLORS.light }}>
+                        This is LandingScreen
+                    </Text>
+                </View>
             <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
-                    <Text style={{ fontWeight : 'bold', color: COLORS.pink}} > SignIn</Text> 
+            <View style={ STYLES.btnPrimary }>
+                        <Text style={{ fontWeight: 'bold', fontSize: 16, color: COLORS.white}}>Ok  </Text>
+                        </View>
             </TouchableOpacity>
+            </ScrollView>
         </SafeAreaView>
         </>
         
